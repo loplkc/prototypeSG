@@ -31,6 +31,12 @@
 				"TS": {
 					"$path": "out/client"
 				}
+			},
+			"StarterCharacterScripts": {
+				"$className": "StarterCharacterScripts",
+				"TS": {
+					"$path": "out/character"
+				}
 			}
 		},
 		"Workspace": {

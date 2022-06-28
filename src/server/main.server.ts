@@ -1,3 +1,31 @@
 import { makeHello } from "shared/module";
+const Workspace = game.GetService("Workspace");
+const Lighting = game.GetService("Lighting");
+const rId = "rbxassetid://";
 
 print(makeHello("main.server.ts"));
+
+const baseplate = new Instance("Part");
+baseplate.Anchored = true;
+baseplate.Material = Enum.Material.Glass;
+baseplate.Size = new Vector3(2048, 2, 2048);
+baseplate.Position = new Vector3(0, -1, 0);
+baseplate.Color = new Color3(1, 1, 1);
+baseplate.Reflectance = 1;
+baseplate.Parent = Workspace;
+const spawnLocation = new Instance("SpawnLocation");
+spawnLocation.Anchored = true;
+spawnLocation.Transparency = 1;
+spawnLocation.Size = new Vector3(1, 1, 1);
+spawnLocation.Position = new Vector3(0, -0.5, 0);
+spawnLocation.Parent = Workspace;
+const sky = new Instance("Sky");
+sky.MoonTextureId = rId + "6444320592";
+sky.SunTextureId = rId + "6196665106";
+sky.SkyboxDn = rId + "6444884785";
+sky.SkyboxUp = rId + "6412503613";
+sky.SkyboxBk = rId + "6444884337";
+sky.SkyboxFt = rId + "6444884337";
+sky.SkyboxLf = rId + "6444884337";
+sky.SkyboxRt = rId + "6444884337";
+sky.Parent = Lighting;
